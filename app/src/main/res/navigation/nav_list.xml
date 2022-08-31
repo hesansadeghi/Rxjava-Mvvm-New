@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_list"
+    app:startDestination="@id/fragmentPost">
+
+
+    <fragment
+        android:id="@+id/fragmentPost"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentPost"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_fragmentPost_to_fragmentDetaileCard"
+            app:destination="@id/fragmentDetaileCard" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSett"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentSett"
+        android:label="fragment_sett"
+        tools:layout="@layout/fragment_sett" />
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentLogIn"
+            app:destination="@id/fragmentLogIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetaileCard"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentDetaileCard"
+        android:label="fragment_detaile_card"
+        tools:layout="@layout/fragment_detaile_card" />
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentRegister"
+        android:label="FragmentRegister" >
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentLogIn"
+            app:destination="@id/fragmentLogIn" />
+        <action
+            android:id="@+id/action_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogIn"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentLogIn"
+        android:label="FragmentLogIn" >
+        <action
+            android:id="@+id/action_fragmentLogIn_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+        <action
+            android:id="@+id/action_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+</navigation>
