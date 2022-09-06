@@ -60,10 +60,21 @@ public final class Repositry {
     {
         SharedPreferences sharedPreferences
                 =context.getSharedPreferences("shrfprf",Context.MODE_PRIVATE);
-
         String token=sharedPreferences.getString("token","-1");
-
        return token;
     }
+
+
+    public static Boolean sharedExit(Context context)
+    {
+        SharedPreferences sharedPreferences
+                =context.getSharedPreferences("shrfprf",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+        return true;
+    }
+
+
 
     }

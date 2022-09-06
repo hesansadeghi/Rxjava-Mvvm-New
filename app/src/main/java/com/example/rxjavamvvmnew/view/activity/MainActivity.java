@@ -14,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -23,9 +24,12 @@ import com.example.rxjavamvvmnew.R;
 
 
 import com.example.rxjavamvvmnew.databinding.ActivityMainBinding;
+import com.example.rxjavamvvmnew.model.ModelCount;
 import com.example.rxjavamvvmnew.model.Model_Posts;
+import com.example.rxjavamvvmnew.repositry.Api;
 import com.example.rxjavamvvmnew.repositry.Repositry;
 import com.example.rxjavamvvmnew.viewmodel.ViewModelPost;
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -93,12 +97,48 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
+        getCountCart();
 
         getSupportActionBar().hide();
 
 
     }
+
+
+    public void getCountCart()
+    {
+        String id=Repositry.readToken(MainActivity.this);
+
+        BadgeDrawable badgeDrawable=binding.btnnav.getOrCreateBadge(R.id.fragmentSett);
+        badgeDrawable.setBackgroundColor(Color.RED);
+
+        if (!id.equals("-1"))
+        {
+
+            Repositry.INSTANCE.CustomResponse(Api.COMPANIO2.invoke().RECORD_COUNT_SINGLE(id),
+                    new Repositry.Unit() {
+                        @Override
+                        public void invoke(Object object) {
+
+                            badgeDrawable.setVisible(true);
+                            ModelCount modelCount= (ModelCount) object;
+
+                            if (modelCount.getCount()==0)
+                            {
+                                badgeDrawable.setVisible(false);
+                            }else {
+                                badgeDrawable.setNumber(modelCount.getCount());
+                            }
+                        }
+                    });
+        }else
+        {
+            badgeDrawable.setVisible(false);
+        }
+
+
+    }
+
 
 
     @Override

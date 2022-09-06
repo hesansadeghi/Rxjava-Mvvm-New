@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     >
 
     <RelativeLayout
-        android:id="@+id/rel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white2"
-        tools:context=".view.fragments.FragmentPost"
         android:layoutDirection="rtl"
-        >
+        tools:context=".view.fragments.FragmentAddress">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarid"
@@ -24,31 +22,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-
                 <TextView
                     android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/iransans"
                     android:gravity="center|right"
-                    android:text="فروشگاه"
-                    android:textColor="@color/white"
+                    android:text="آدرس ها"
+                    android:fontFamily="@font/iransans"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/nocolor"
+                    android:src="@drawable/add_adres" />
+
+
+
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 
-
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclrid"
+            android:id="@+id/rcyclradrsid"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/toolbarid"
-            />
+            android:background="@color/white2"
+            android:layout_below="@id/toolbarid" />
+
 
 
     </RelativeLayout>
+
 
 </layout>
 

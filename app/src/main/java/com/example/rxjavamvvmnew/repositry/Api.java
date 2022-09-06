@@ -1,6 +1,14 @@
 package com.example.rxjavamvvmnew.repositry;
 
+import com.example.rxjavamvvmnew.model.ModelAddress;
+import com.example.rxjavamvvmnew.model.ModelAllPrice;
+import com.example.rxjavamvvmnew.model.ModelCount;
+import com.example.rxjavamvvmnew.model.ModelDelCart;
 import com.example.rxjavamvvmnew.model.ModelDetails;
+import com.example.rxjavamvvmnew.model.ModelMinAdd;
+import com.example.rxjavamvvmnew.model.ModelOrder;
+import com.example.rxjavamvvmnew.model.ModelProfile;
+import com.example.rxjavamvvmnew.model.ModelRecord;
 import com.example.rxjavamvvmnew.model.Model_Posts;
 import com.example.rxjavamvvmnew.model.Status;
 
@@ -34,6 +42,46 @@ public interface Api {
     @FormUrlEncoded
     @POST("login.php")
     Single<Status> STATUS_LOGIN_SINGLE(@Field("mobile") String mobile, @Field("pass") String pass);
+
+
+    @FormUrlEncoded
+    @POST("user_info.php")
+    Single<List<ModelProfile>> MODEL_PROFILE_SINGLE(@Field("user_id")String id);
+
+
+    @FormUrlEncoded
+    @POST("list_order.php")
+    Single<List<ModelOrder>> MODEL_ORDERS_SINGLE(@Field("user")String id);
+
+
+    @FormUrlEncoded
+    @POST("Get_record_cart.php")
+    Single<List<ModelRecord>> MODEL_RECORD_SINGLE(@Field("user")String id);
+
+    @FormUrlEncoded
+    @POST("Get_pricecart.php")
+    Single<List<ModelAllPrice>> LIST_ALLPRICE_SINGLE(@Field("user")String id);
+
+
+    @FormUrlEncoded
+    @POST("Addcart.php")
+    Single<ModelMinAdd> ADD_MIN_CARD_SINGLE(@Field("check")String check, @Field("user")String user,
+                                            @Field("product")String product, @Field("count")String count);
+
+
+    @FormUrlEncoded
+    @POST("fcart.php")
+    Single<ModelCount> RECORD_COUNT_SINGLE(@Field("user")String id);
+
+
+    @FormUrlEncoded
+    @POST("del_cart.php")
+    Single<ModelDelCart> DEL_CART_SINGLE(@Field("idcart")String idcart);
+
+
+    @FormUrlEncoded
+    @POST("Get_address.php")
+    Single<List<ModelAddress>> MODEL_ADDRESS_SINGLE(@Field("user")String user);
 
 
     public static final class Companion2 {

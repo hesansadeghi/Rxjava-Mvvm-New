@@ -19,7 +19,11 @@
         android:id="@+id/fragmentSett"
         android:name="com.example.rxjavamvvmnew.view.fragments.FragmentSett"
         android:label="fragment_sett"
-        tools:layout="@layout/fragment_sett" />
+        tools:layout="@layout/fragment_sett" >
+        <action
+            android:id="@+id/action_fragmentSett_to_fragmentAddress"
+            app:destination="@id/fragmentAddress" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentProfile"
         android:name="com.example.rxjavamvvmnew.view.fragments.FragmentProfile"
@@ -33,7 +37,11 @@
         android:id="@+id/fragmentDetaileCard"
         android:name="com.example.rxjavamvvmnew.view.fragments.FragmentDetaileCard"
         android:label="fragment_detaile_card"
-        tools:layout="@layout/fragment_detaile_card" />
+        tools:layout="@layout/fragment_detaile_card" >
+        <action
+            android:id="@+id/action_fragmentDetaileCard_to_fragmentLogIn"
+            app:destination="@id/fragmentLogIn" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentRegister"
         android:name="com.example.rxjavamvvmnew.view.fragments.FragmentRegister"
@@ -56,4 +64,8 @@
             android:id="@+id/action_to_fragmentProfile"
             app:destination="@id/fragmentProfile" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentAddress"
+        android:name="com.example.rxjavamvvmnew.view.fragments.FragmentAddress"
+        android:label="FragmentAddress" />
 </navigation>

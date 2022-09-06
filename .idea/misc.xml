@@ -3,18 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/drawable/add.xml" value="0.1205" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/drawable/remove.xml" value="0.1205" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/drawable/settings.xml" value="0.1035" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_address.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_detaile_card.xml" value="0.22" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_details.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_log_in.xml" value="0.18" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_log_mobile.xml" value="0.2" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_post.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_register.xml" value="0.33" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_sett.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/fragment_sett.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/item_address.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/item_layout.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/item_pager.xml" value="0.10960144927536232" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/items_list_order.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/items_record.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/items_slider.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/layout/itemspost.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/RxjavaMvvmNew/app/src/main/res/menu/menu_list.xml" value="0.20416666666666666" />

@@ -1,14 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.fragments.FragmentSett">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.rxjavamvvmnew.model.ModelRecord" />
+
+        <variable
+            name="allprice"
+            type="com.example.rxjavamvvmnew.model.ModelAllPrice" />
+
+
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:background="#000"/>
+        android:layoutDirection="rtl"
+        tools:context=".view.fragments.FragmentSett">
 
-</RelativeLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarid"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/yellow">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/iransans"
+                    android:gravity="center|right"
+                    android:text="سبد خرید"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/toolbarid"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_finall_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green2"
+                android:fontFamily="@font/iransans"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:text="قیمت نهایی"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_finall_prc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green2"
+                android:fontFamily="@font/iransans"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+                android:text="@{allprice.price}"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcylr_sell_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_finall_buy"
+            android:layout_below="@id/lin1"
+            android:background="@color/white2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_finall_buy"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green2"
+            android:fontFamily="@font/iransans"
+            android:text="نهایی کردن خرید"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</layout>
+

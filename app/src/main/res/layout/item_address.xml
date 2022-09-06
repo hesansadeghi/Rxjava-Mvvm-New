@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.rxjavamvvmnew.model.ModelAddress" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        app:cardCornerRadius="13dp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="کدملی : "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_meli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.meli}"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="شهر شما : "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@{data.address}"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="آدرس شما : "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_adrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.address}"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="شماره موبایل : "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.phone}"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="شماره تلفن : "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_tell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.tell}"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/iransans"
+                    android:padding="10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</layout>
+
